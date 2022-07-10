@@ -1,0 +1,32 @@
+<html>
+    <body>
+        <p>hello world</p>
+        
+    </body>
+    <style>
+        body {
+            background-color: antiquewhite;
+
+            display: flex;
+            align-items: center;
+            justify-content: center;
+
+            margin: 0;
+        }
+        canvas {
+            max-width: 100vm;
+            max-height: 100vh;
+        }
+    </style>
+    <script>
+        const canvas = document.createElement('canvas');
+        document.body.appendChild(canvas);
+
+        const context = canvas.getContext('2d');
+
+        const render = () => {
+            console.log('first');
+        }
+        render();
+    </script> 
+</html>
