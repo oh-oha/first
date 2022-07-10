@@ -1,32 +1,38 @@
 <html>
+    <head>
+        <style>
+            * { padding: 0; margin: 0; }
+            canvas { background: #eee; display: block; margin: 0 auto; }
+        </style>
+    </head>
     <body>
-        <p>hello world</p>
-        
+        <canvas id="mine" width="480" height="320"></canvas>
+        <script>
+            const canvas = document.getElementById('mine');
+            const context = canvas.getContext('2d');
+
+            context.beginPath();
+            context.rect(40, 40, 100, 150);
+            context.fillStyle = "#FFFFFF";
+            context.fill();
+            context.closePath();
+            
+            context.beginPath();
+            context.arc(220, 160, 20, 0, Math.PI*2, false);
+            context.fillStyle = "white";
+            context.fill();
+            context.closePath();
+
+            context.beginPath();
+            context.rect(300, 40, 100, 150);
+            context.fillStyle = "#FFFFFF";
+            context.fill();
+            context.closePath();
+            
+            const render = () => {
+                // console.log('first');
+            }
+            render();
+        </script> 
     </body>
-    <style>
-        body {
-            background-color: antiquewhite;
-
-            display: flex;
-            align-items: center;
-            justify-content: center;
-
-            margin: 0;
-        }
-        canvas {
-            max-width: 100vm;
-            max-height: 100vh;
-        }
-    </style>
-    <script>
-        const canvas = document.createElement('canvas');
-        document.body.appendChild(canvas);
-
-        const context = canvas.getContext('2d');
-
-        const render = () => {
-            console.log('first');
-        }
-        render();
-    </script> 
 </html>
